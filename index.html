@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🥳</text></svg>">
+  <title>Happy Birthday</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Syne:wght@700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+
+  <div class="bg-glow"></div>
+  
+  <!-- Canvas para las chispas y fuegos artificiales reales -->
+  <canvas id="fireworksCanvas"></canvas>
+  <div id="balloonsContainer"></div>
+
+  <!-- Pantalla de bloqueo / PIN -->
+  <div id="lockScreen" class="lock-screen">
+    <div class="lock-card">
+      <span class="badge">NIVEL DESBLOQUEABLE 🎮</span>
+      <h2>Ingresa la clave 🔑</h2>
+      
+      <form id="loginForm">
+        <input type="password" id="passInput" placeholder="PIN Secreto" maxlength="15" autocomplete="off" required />
+        <button type="submit" class="btn-primary">Desbloquear 🚀</button>
+      </form>
+      
+      <p id="errorMsg" class="error-msg"></p>
+    </div>
+  </div>
+
+  <!-- Contenido principal (Oculto hasta ingresar el PIN) -->
+  <main id="mainContent" class="container hidden">
+    <header class="hero">
+      <span class="badge">12-10-1996 // SPECIAL DAY</span>
+      <h1>FELIZ <br><span class="highlight">CUMPLEAÑOS</span> 🥳🥳</h1>
+      <p class="subtitle">Un año más (❁´◡`❁)</p>
+    </header>
+
+    <section class="action-section">
+      <button id="surpriseBtn" class="btn-primary">
+        Presiona para la sorpresa 🚀
+      </button>
+    </section>
+
+    <section class="card message-card">
+      <h2>Pase de nivel 🎮</h2>
+      <p>
+        Feliz cumpleaños. Pasala bien hoy y siempre.
+      </p>
+    </section>
+
+    <section class="gallery-section">
+      <h2>Evolución 📸</h2>
+      <div class="grid-gallery">
+        <div class="photo-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTL_SyXlsMHk5j8casSYuBbrh0TAKizl_Bq6l9HKnHEcg&s=10" alt="Momento 1">
+          <p>Día 1</p>
+        </div>
+        <div class="photo-card">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBXivSu7UmEK7nuFiaQJEt4p14jPP-9U6QNztJR-HnXQ&s=10" alt="Momento 2">
+          <p>Unos años después</p>
+        </div>
+        <div class="photo-card">
+          <img src="https://png.pngtree.com/png-clipart/20250126/original/pngtree-the-number-30-in-bold-golden-letters-symbolizing-a-milestone-or-png-image_20326017.png" alt="Momento 3">
+          <p>Actualmente</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Audios -->
+  <audio id="popSound" src="https://assets.mixkit.co/active_storage/sfx/2571/2571-preview.mp3" preload="auto"></audio>
+  <audio id="bgMusic" src="mananitas.mp3" preload="auto"></audio>
+
+  <script src="script.js"></script>
+</body>
+</html>
