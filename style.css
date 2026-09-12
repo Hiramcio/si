@@ -289,3 +289,8 @@ body {
   0% { transform: translateY(0) rotate(0deg); opacity: 1; }
   100% { transform: translateY(-110vh) rotate(20deg); opacity: 0.8; }
 }
+@media (max-width: 480px) {
+  h1, .hero-title {
+    font-size: 2rem; /* O el tamaño adecuado para que entre completo */
+  }
+}
