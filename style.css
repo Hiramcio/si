@@ -154,7 +154,7 @@ body {
 
 .hero h1 {
   font-family: 'Syne', sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   line-height: 1.05;
   margin: 16px 0 12px;
 }
@@ -289,8 +289,19 @@ body {
   0% { transform: translateY(0) rotate(0deg); opacity: 1; }
   100% { transform: translateY(-110vh) rotate(20deg); opacity: 0.8; }
 }
+
+/* Ajustes responsivos para celulares */
 @media (max-width: 480px) {
-  h1, .hero-title {
-    font-size: 2rem; /* O el tamaño adecuado para que entre completo */
+  .hero {
+    padding: 28px 16px;
+  }
+
+  .hero h1 {
+    font-size: 1.8rem !important;
+    letter-spacing: -0.5px;
+  }
+
+  .highlight {
+    font-size: 1.8rem !important;
   }
 }
